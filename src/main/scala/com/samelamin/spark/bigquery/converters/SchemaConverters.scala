@@ -51,7 +51,7 @@ object SchemaConverters {
       case _: DecimalType => "FLOAT"
       case BinaryType => "BYTES"
       case BooleanType => "BOOLEAN"
-      case TimestampType => "TIMESTAMP"
+      case TimestampType => "LONG"
       case DateType => "DATE"
       case ArrayType(_, _) | MapType(_, _, _) | _: StructType => "RECORD"
       case _ => throw new RuntimeException (s"Couldn't match type $dataType")
@@ -91,7 +91,7 @@ object SchemaConverters {
       case "STRING" => StringType
       case "BYTES" => BinaryType
       case "BOOLEAN" => BooleanType
-      case "TIMESTAMP" => TimestampType
+      case "TIMESTAMP" => LongType
     }
 
   }
