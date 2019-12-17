@@ -92,7 +92,7 @@ object SchemaConverters {
       case "BYTES" => BinaryType
       case "BOOLEAN" => BooleanType
       case "TIMESTAMP" => LongType
-      case "DATE" => DateType
+      case "DATE" => StringType
     }
 
   }
